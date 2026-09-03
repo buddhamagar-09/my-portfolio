@@ -3,6 +3,8 @@ import Hero from "./Components/Hero";
 import About from "./Components/About";
 import Education from "./Components/Education";
 import Skills from "./Components/Skills";
+import Projects from "./Components/Projects";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
@@ -17,14 +19,10 @@ function App() {
       
       <Education />
 
-      <section
-        id="home"
-        className="min-h-screen flex items-center justify-center"
-      >
-        <h1 className="text-5xl font-bold text-white">
-          Buddha's Portfolio
-        </h1>
-      </section>
+      <Projects />
+
+      <Contact />
+      
     </div>
   );
 }
