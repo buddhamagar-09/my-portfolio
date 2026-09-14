@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 function Hero() {
+  const imagePath = (name) => `${import.meta.env.BASE_URL}${name}`;
   return (
     <section
       id="home"
@@ -138,7 +139,7 @@ function Hero() {
               {/* Image */}
               <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-xl p-3">
                 <img
-                  src="/buddha.jpeg"
+                  src={imagePath("/buddha.jpeg")}
                   alt="Buddha"
                   className="w-full h-full object-cover"
                 />

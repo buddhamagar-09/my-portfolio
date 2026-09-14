@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaEnvelope,
@@ -9,7 +9,6 @@ import {
   FaInstagram,
   FaArrowUpRightFromSquare,
 } from "react-icons/fa6";
-
 
 function Contact() {
   const contactInfo = [
@@ -26,6 +25,61 @@ function Contact() {
       link: null,
     },
   ];
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setStatus("");
+
+    const formData = new FormData(e.target);
+
+    formData.append("access_key", "aed4b69b-8463-48e7-8e87-c6561029aaec");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("success");
+
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+
+        e.target.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+
+    setLoading(false);
+  };
 
   const socials = [
     {
@@ -111,9 +165,7 @@ function Contact() {
                       <p className="text-sm text-[#94A3B8] mb-1">
                         {item.label}
                       </p>
-                      <p className="font-medium text-[#1E293B]">
-                        {item.value}
-                      </p>
+                      <p className="font-medium text-[#1E293B]">{item.value}</p>
                     </div>
 
                     {item.link && (
@@ -193,7 +245,7 @@ function Contact() {
                 </p>
               </div>
 
-              <form onSubmit={(e) => e.preventDefault()}>
+              <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   {/* Name */}
                   <div>
@@ -203,6 +255,10 @@ function Contact() {
 
                     <input
                       type="text"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
                       // placeholder="John Doe"
                       className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3.5 text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#7C3AED] focus:ring-4 focus:ring-purple-100 transition-all"
                     />
@@ -216,6 +272,10 @@ function Contact() {
 
                     <input
                       type="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
                       // placeholder="john@email.com"
                       className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3.5 text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#7C3AED] focus:ring-4 focus:ring-purple-100 transition-all"
                     />
@@ -230,6 +290,10 @@ function Contact() {
 
                   <input
                     type="text"
+                    name="subject"
+                    required
+                    value={formData.subject}
+                    onChange={handleChange}
                     placeholder="What's this about?"
                     className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3.5 text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#7C3AED] focus:ring-4 focus:ring-purple-100 transition-all"
                   />
@@ -243,10 +307,26 @@ function Contact() {
 
                   <textarea
                     rows="5"
+                    name="message"
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Tell me about your project or idea..."
                     className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3.5 text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#7C3AED] focus:ring-4 focus:ring-purple-100 transition-all resize-none"
                   />
                 </div>
+
+                {status === "success" && (
+                  <p className="mt-5 text-green-600 font-medium">
+                    Message sent successfully! I'll get back to you soon.
+                  </p>
+                )}
+
+                {status === "error" && (
+                  <p className="mt-5 text-red-600 font-medium">
+                    Something went wrong. Please try again.
+                  </p>
+                )}
 
                 {/* Button */}
                 <motion.button

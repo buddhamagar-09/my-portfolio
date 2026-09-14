@@ -10,6 +10,7 @@ import {
 import { SiMysql, SiTailwindcss, SiJavascript } from "react-icons/si";
 
 function Projects() {
+  const imagePath = (name) => `${import.meta.env.BASE_URL}${name}`;
   const projects = [
     {
       title: "TravelMate",
@@ -22,7 +23,7 @@ function Projects() {
         { name: "MySQL", icon: SiMysql },
         { name: "Tailwind CSS", icon: SiTailwindcss },
       ],
-      github: "#",
+      github: "https://github.com/buddhamagar-09/TravelMate",
       live: "#",
       icon: FaReact,
       image: "/travelmate1.png",
@@ -36,11 +37,44 @@ function Projects() {
         { name: "PHP", icon: FaPhp },
         { name: "MySQL", icon: SiMysql },
         { name: "JavaScript", icon: SiJavascript },
+        { name: "Tailwind CSS", icon: SiTailwindcss }
       ],
-      github: "#",
+      github: "https://github.com/buddhamagar-09/MotoMods_Nepal",
       live: "#",
       icon: FaPhp,
       image: "/motomods1.png",
+    },
+        {
+      title: "FashionHub",
+      category: "E-Commerce Website",
+      description:
+        "An e-commerce website for clothes and accessories where users can browse products and manage their purchases through a simple shopping experience.",
+      technologies: [
+        { name: "PHP", icon: FaPhp },
+        { name: "MySQL", icon: SiMysql },
+        { name: "JavaScript", icon: SiJavascript },
+        { name: "Tailwind CSS", icon: SiTailwindcss },
+      ],
+      github: "https://github.com/buddhamagar-09/EcommerceDemo",
+      live: "#",
+      icon: FaPhp,
+      image: "FashionHub.png",
+    },
+      {
+      title: "FutBook",
+      category: "E-Commerce Website",
+      description:
+        "An e-commerce website for Sports cleats and accessories where users can browse products and manage their purchases through a simple shopping experience.",
+      technologies: [
+        { name: "laravel", icon: FaLaravel },
+        { name: "MySQL", icon: SiMysql },
+        { name: "JavaScript", icon: SiJavascript },
+        { name: "Tailwind CSS", icon: SiTailwindcss },
+      ],
+      github: "https://github.com/buddhamagar-09/futbook",
+      live: "#",
+      icon: FaLaravel,
+      image: "FutBook.png",
     },
   ];
 
@@ -104,7 +138,7 @@ function Projects() {
                   {/* Project Image */}
                   <div className="w-full h-full overflow-hidden flex items-center justify-center">
                     <img
-                      src={project.image}
+                      src={imagePath(project.image)}
                       alt={project.title}
                       className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     />
