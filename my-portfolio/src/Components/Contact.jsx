@@ -89,12 +89,12 @@ function Contact() {
     },
     {
       icon: FaLinkedin,
-      link: "#",
+      link: "https://www.linkedin.com/in/buddha-magar-09/",
       label: "LinkedIn",
     },
     {
       icon: FaInstagram,
-      link: "https://www.instagram.com/buddhamagar09/",
+      link: "https://www.instagram.com/buddha_magar09/",
       label: "Instagram",
     },
   ];
