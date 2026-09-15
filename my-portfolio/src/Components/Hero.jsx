@@ -139,7 +139,7 @@ function Hero() {
               {/* Image */}
               <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-xl p-3">
                 <img
-                  src={imagePath("/buddha.jpeg")}
+                  src={imagePath("buddha.jpeg")}
                   alt="Buddha"
                   className="w-full h-full object-cover"
                 />

@@ -26,7 +26,7 @@ function Projects() {
       github: "https://github.com/buddhamagar-09/TravelMate",
       live: "#",
       icon: FaReact,
-      image: "/travelmate1.png",
+      image: "travelmate1.png",
     },
     {
       title: "MotoMods Nepal",
@@ -42,7 +42,7 @@ function Projects() {
       github: "https://github.com/buddhamagar-09/MotoMods_Nepal",
       live: "#",
       icon: FaPhp,
-      image: "/motomods1.png",
+      image: "motomods1.png",
     },
         {
       title: "FashionHub",
