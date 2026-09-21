@@ -46,9 +46,7 @@ function Hero() {
               className="text-2xl md:text-3xl font-semibold text-[#334155] mt-4"
             >
               BCA Student &{" "}
-              <span className="text-[#7C3AED]">
-                Full Stack Web Development Enthusiast
-              </span>
+              <span className="text-[#7C3AED]">Software Developer</span>
             </motion.h2>
 
             {/* Description */}
@@ -58,9 +56,11 @@ function Hero() {
               transition={{ duration: 0.7, delay: 0.5 }}
               className="text-[#64748B] text-lg leading-8 max-w-xl mt-6"
             >
-              I am passionate about building modern and practical web
-              applications. I enjoy working with React, Laravel, PHP, MySQL, and
-              JavaScript while continuously learning new technologies.
+              I am passionate about developing practical software solutions and
+              solving problems through code. I enjoy working with technologies
+              such as Java, JavaScript, React, Laravel, PHP, and MySQL while
+              continuously expanding my programming and software development
+              skills.
             </motion.p>
 
             {/* Buttons */}

@@ -4,12 +4,8 @@ import { motion } from "framer-motion";
 
 function About() {
   return (
-    <section
-      id="about"
-      className="bg-[#F8FAFC] text-[#0F172A] py-14"
-    >
+    <section id="about" className="bg-[#F8FAFC] text-[#0F172A] py-14">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -18,19 +14,14 @@ function About() {
           transition={{ duration: 0.7 }}
           className="mb-14"
         >
-          <p className="text-[#7C3AED] font-medium mb-2">
-            About Me
-          </p>
+          <p className="text-[#7C3AED] font-medium mb-2">About Me</p>
 
-          <h2 className="text-4xl md:text-5xl font-bold">
-            A little about me
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold">A little about me</h2>
 
           <div className="w-16 h-1 bg-[#7C3AED] mt-5" />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
           {/* Main About Text */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -40,23 +31,24 @@ function About() {
             className="lg:col-span-2"
           >
             <p className="text-[#334155] text-lg leading-8 mb-6">
-              I'm currently pursuing my Bachelor of Computer Applications
-              (BCA) and developing my skills in full-stack web development.
-              I enjoy turning ideas into functional and user-friendly web
-              applications.
+              I'm currently pursuing my Bachelor of Computer Applications (BCA)
+              and developing my skills as a software developer. I enjoy building
+              practical software solutions, solving problems through code, and
+              turning ideas into useful applications.
             </p>
 
             <p className="text-[#64748B] text-lg leading-8 mb-6">
-              My main interests are frontend and backend development,
-              particularly working with React, Laravel, PHP, MySQL, and
-              JavaScript. I also enjoy learning new technologies and
-              improving my problem-solving skills through real-world
+              My current experience includes working with Java, JavaScript,
+              React, Laravel, PHP, MySQL, HTML, and CSS. I enjoy exploring
+              different areas of software development and improving my
+              programming and problem-solving skills through real-world
               projects.
             </p>
 
             <p className="text-[#64748B] text-lg leading-8">
-              Currently, I'm expanding my knowledge of Advanced Java while
-              continuing to explore modern web development technologies.
+              Currently, I'm expanding my knowledge of Advanced Java and Python
+              while continuing to learn new technologies and strengthen my
+              foundation in software development.
             </p>
           </motion.div>
 
@@ -68,7 +60,6 @@ function About() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="space-y-7"
           >
-
             {/* Highlight 1 */}
             <div className="flex items-start gap-5 border-l-2 border-[#7C3AED] pl-5">
               <FaCode className="text-[#7C3AED] text-2xl mt-1" />
@@ -113,7 +104,6 @@ function About() {
                 </p>
               </div>
             </div>
-
           </motion.div>
         </div>
       </div>
