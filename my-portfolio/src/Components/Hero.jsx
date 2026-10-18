@@ -113,7 +113,7 @@ function Hero() {
 
               {/* LinkedIn */}
               <motion.a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/buddha-magar-061115442/"
                 target="_blank"
                 rel="noreferrer"
                 whileHover={{ y: -4, scale: 1.1 }}

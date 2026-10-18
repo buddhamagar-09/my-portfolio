@@ -69,7 +69,7 @@ function Navbar() {
             </a>
 
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/buddha-magar-061115442/"
               target="_blank"
               rel="noreferrer"
               className="text-[#64748B] hover:text-[#7C3AED] transition-colors"
@@ -78,7 +78,8 @@ function Navbar() {
             </a>
 
             <a
-              href="/buddhacv.pdf"
+              href="/BuddhaResume.pdf"
+              download
               className="border border-[#7C3AED] text-[#7C3AED] px-5 py-2 rounded-md text-sm font-medium hover:bg-[#7C3AED] hover:text-white transition-all duration-300"
             >
               Download CV
@@ -123,7 +124,7 @@ function Navbar() {
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/buddhamagar"
+                  href="https://www.linkedin.com/in/buddha-magar-061115442/"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[#64748B] hover:text-[#7C3AED]"
@@ -132,7 +133,8 @@ function Navbar() {
                 </a>
 
                 <a
-                  href="/resume.pdf"
+                  href="/BuddhaResume.pdf"
+                  download
                   className="border border-[#7C3AED] text-[#7C3AED] px-4 py-2 rounded-md text-sm hover:bg-[#7C3AED] hover:text-white"
                 >
                   Resume

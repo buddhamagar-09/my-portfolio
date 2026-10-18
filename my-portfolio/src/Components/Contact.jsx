@@ -89,7 +89,7 @@ function Contact() {
     },
     {
       icon: FaLinkedin,
-      link: "https://www.linkedin.com/in/buddha-magar-09/",
+      link: "https://www.linkedin.com/in/buddha-magar-061115442/",
       label: "LinkedIn",
     },
     {
