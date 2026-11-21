@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
   FaGithub,
@@ -24,7 +23,7 @@ function Projects() {
         { name: "Tailwind CSS", icon: SiTailwindcss },
       ],
       github: "https://github.com/buddhamagar-09/TravelMate",
-      live: "#",
+      live: null,
       icon: FaReact,
       image: "travelmate1.png",
     },
@@ -37,14 +36,14 @@ function Projects() {
         { name: "PHP", icon: FaPhp },
         { name: "MySQL", icon: SiMysql },
         { name: "JavaScript", icon: SiJavascript },
-        { name: "Tailwind CSS", icon: SiTailwindcss }
+        { name: "Tailwind CSS", icon: SiTailwindcss },
       ],
       github: "https://github.com/buddhamagar-09/MotoMods_Nepal",
-      live: "#",
+      live: null,
       icon: FaPhp,
       image: "motomods1.png",
     },
-        {
+    {
       title: "FashionHub",
       category: "E-Commerce Website",
       description:
@@ -56,35 +55,31 @@ function Projects() {
         { name: "Tailwind CSS", icon: SiTailwindcss },
       ],
       github: "https://github.com/buddhamagar-09/EcommerceDemo",
-      live: "#",
+      live: null,
       icon: FaPhp,
       image: "FashionHub.png",
     },
-      {
+    {
       title: "FutBook",
       category: "E-Commerce Website",
       description:
         "An e-commerce website for Sports cleats and accessories where users can browse products and manage their purchases through a simple shopping experience.",
       technologies: [
-        { name: "laravel", icon: FaLaravel },
+        { name: "Laravel", icon: FaLaravel },
         { name: "MySQL", icon: SiMysql },
         { name: "JavaScript", icon: SiJavascript },
         { name: "Tailwind CSS", icon: SiTailwindcss },
       ],
       github: "https://github.com/buddhamagar-09/futbook",
-      live: "#",
+      live: null,
       icon: FaLaravel,
       image: "FutBook.png",
     },
   ];
 
   return (
-    <section
-      id="projects"
-      className="bg-[#F8FAFC] text-[#0F172A] py-14"
-    >
+    <section id="projects" className="bg-[#F8FAFC] text-[#0F172A] py-14">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -93,13 +88,9 @@ function Projects() {
           transition={{ duration: 0.7 }}
           className="mb-16"
         >
-          <p className="text-[#7C3AED] font-medium mb-3">
-            Projects
-          </p>
+          <p className="text-[#7C3AED] font-medium mb-3">Projects</p>
 
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Things I've built
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold">Things I've built</h2>
 
           <div className="w-16 h-1 bg-[#7C3AED] mt-5" />
 
@@ -112,8 +103,6 @@ function Projects() {
         {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => {
-            const ProjectIcon = project.icon;
-
             return (
               <motion.article
                 key={project.title}
@@ -127,14 +116,8 @@ function Projects() {
                 whileHover={{ y: -6 }}
                 className="group border border-[#E2E8F0] bg-white overflow-hidden"
               >
-
                 {/* Project Preview */}
                 <div className="relative h-64 bg-[#FFFFFF] flex items-center justify-center overflow-hidden">
-
-                  {/* Border Frame */}
-                  {/* <div className="absolute inset-5 border border-[#E2E8F0] group-hover:border-[#7C3AED] transition-colors duration-500 z-10 pointer-events-none" /> */}
-
-
                   {/* Project Image */}
                   <div className="w-full h-full overflow-hidden flex items-center justify-center">
                     <img
@@ -147,7 +130,6 @@ function Projects() {
 
                 {/* Project Content */}
                 <div className="p-7">
-
                   <p className="text-[#7C3AED] text-sm font-medium mb-2">
                     {project.category}
                   </p>
@@ -179,7 +161,6 @@ function Projects() {
 
                   {/* Links */}
                   <div className="flex items-center gap-5 mt-7 pt-5 border-t border-[#E2E8F0]">
-
                     <a
                       href={project.github}
                       target="_blank"
@@ -190,16 +171,22 @@ function Projects() {
                       GitHub
                     </a>
 
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-2 text-sm text-[#475569] hover:text-[#7C3AED] transition-colors"
-                    >
-                      <FaExternalLinkAlt className="text-sm" />
-                      Live Demo
-                    </a>
-
+                    {project.live ? (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-2 text-sm text-[#475569] hover:text-[#7C3AED] transition-colors"
+                      >
+                        <FaExternalLinkAlt className="text-sm" />
+                        Live Demo
+                      </a>
+                    ) : (
+                      <span className="inline-flex items-center gap-2 border border-dashed border-[#CBD5E1] px-3 py-2 text-xs text-[#94A3B8] cursor-default">
+                        <FaExternalLinkAlt className="text-sm" />
+                        Coming Soon
+                      </span>
+                    )}
                   </div>
                 </div>
               </motion.article>
