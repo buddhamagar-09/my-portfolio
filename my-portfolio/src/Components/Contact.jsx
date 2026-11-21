@@ -15,8 +15,8 @@ function Contact() {
     {
       icon: FaEnvelope,
       label: "Email",
-      value: "busa_bca2080@lict.edu.np",
-      link: "mailto:busa_bca2080@lict.edu.np",
+      value: "magarbuddha431@gmail.com",
+      link: "mailto:magarbuddha431@gmail.com",
     },
     {
       icon: FaLocationDot,
