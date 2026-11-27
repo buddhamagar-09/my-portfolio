@@ -15,7 +15,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-[#E2E8F0]">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0A1120]/95 backdrop-blur-lg border-b border-[#22304A]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -26,16 +26,16 @@ function Navbar() {
             className="group flex items-center gap-2 cursor-pointer"
           >
             {/* Logo Icon */}
-            <div className="relative w-10 h-10 flex items-center justify-center bg-[#7C3AED] rounded-xl shadow-md shadow-purple-200 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#6D28D9]">
-              <span className="text-white font-bold text-lg">&lt;/&gt;</span>
+            <div className="relative w-10 h-10 flex items-center justify-center bg-[#22D3EE] rounded-xl shadow-md shadow-cyan-400/25 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#67E8F9]">
+              <span className="text-[#06111F] font-bold text-lg">&lt;/&gt;</span>
             </div>
 
             {/* Logo Text */}
             <div className="flex flex-col leading-none">
-              <span className="text-lg font-bold tracking-tight text-[#0F172A]">
+              <span className="text-lg font-bold tracking-tight text-[#F1F5F9]">
                 Buddha
               </span>
-              <span className="text-[10px] font-medium tracking-[0.2em] text-[#7C3AED] uppercase mt-1">
+              <span className="text-[10px] font-medium tracking-[0.2em] text-[#22D3EE] uppercase mt-1">
                 Portfolio
               </span>
             </div>
@@ -50,7 +50,7 @@ function Navbar() {
                 smooth={true}
                 duration={500}
                 offset={-80}
-                className="text-[#64748B] hover:text-[#7C3AED] transition-colors duration-300 cursor-pointer text-sm font-medium"
+                className="text-[#94A3B8] hover:text-[#22D3EE] transition-colors duration-300 cursor-pointer text-sm font-medium"
               >
                 {link.name}
               </Link>
@@ -63,7 +63,7 @@ function Navbar() {
               href="https://github.com/buddhamagar-09"
               target="_blank"
               rel="noreferrer"
-              className="text-[#64748B] hover:text-[#0F172A] transition-colors"
+              className="text-[#94A3B8] hover:text-[#F1F5F9] transition-colors"
             >
               <FaGithub size={20} />
             </a>
@@ -72,7 +72,7 @@ function Navbar() {
               href="https://www.linkedin.com/in/buddha-magar-061115442/"
               target="_blank"
               rel="noreferrer"
-              className="text-[#64748B] hover:text-[#7C3AED] transition-colors"
+              className="text-[#94A3B8] hover:text-[#22D3EE] transition-colors"
             >
               <FaLinkedin size={20} />
             </a>
@@ -80,7 +80,7 @@ function Navbar() {
             <a
               href="/BuddhaResume.pdf"
               download
-              className="border border-[#7C3AED] text-[#7C3AED] px-5 py-2 rounded-md text-sm font-medium hover:bg-[#7C3AED] hover:text-white transition-all duration-300"
+              className="border border-[#22D3EE] text-[#22D3EE] px-5 py-2 rounded-md text-sm font-medium hover:bg-[#22D3EE] hover:text-[#06111F] transition-all duration-300"
             >
               Download CV
             </a>
@@ -89,7 +89,7 @@ function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-[#7C3AED] text-2xl"
+            className="lg:hidden text-[#22D3EE] text-2xl"
           >
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -97,7 +97,7 @@ function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden border-t border-[#E2E8F0] py-5">
+          <div className="lg:hidden border-t border-[#22304A] py-5">
             <div className="flex flex-col gap-5">
               {navLinks.map((link) => (
                 <Link
@@ -107,18 +107,18 @@ function Navbar() {
                   duration={500}
                   offset={-80}
                   onClick={() => setIsOpen(false)}
-                  className="text-[#64748B] hover:text-[#7C3AED] transition-colors cursor-pointer"
+                  className="text-[#94A3B8] hover:text-[#22D3EE] transition-colors cursor-pointer"
                 >
                   {link.name}
                 </Link>
               ))}
 
-              <div className="flex items-center gap-5 pt-3 border-t border-[#E2E8F0]">
+              <div className="flex items-center gap-5 pt-3 border-t border-[#22304A]">
                 <a
                   href="https://github.com/buddhamagar-09"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[#64748B] hover:text-[#0F172A]"
+                  className="text-[#94A3B8] hover:text-[#F1F5F9]"
                 >
                   <FaGithub size={21} />
                 </a>
@@ -127,7 +127,7 @@ function Navbar() {
                   href="https://www.linkedin.com/in/buddha-magar-061115442/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[#64748B] hover:text-[#7C3AED]"
+                  className="text-[#94A3B8] hover:text-[#22D3EE]"
                 >
                   <FaLinkedin size={21} />
                 </a>
@@ -135,7 +135,7 @@ function Navbar() {
                 <a
                   href="/BuddhaResume.pdf"
                   download
-                  className="border border-[#7C3AED] text-[#7C3AED] px-4 py-2 rounded-md text-sm hover:bg-[#7C3AED] hover:text-white"
+                  className="border border-[#22D3EE] text-[#22D3EE] px-4 py-2 rounded-md text-sm hover:bg-[#22D3EE] hover:text-[#06111F]"
                 >
                   Resume
                 </a>

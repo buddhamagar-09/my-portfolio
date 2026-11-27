@@ -32,7 +32,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="bg-[#F8FAFC] text-[#0F172A] py-14"
+      className="bg-transparent text-[#F1F5F9] py-14"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -44,7 +44,7 @@ function Skills() {
           transition={{ duration: 0.7 }}
           className="mb-20"
         >
-          <p className="text-[#7C3AED] font-medium mb-3">
+          <p className="text-[#22D3EE] font-medium mb-3">
             Skills
           </p>
 
@@ -52,9 +52,9 @@ function Skills() {
             Technologies I use
           </h2>
 
-          <div className="w-16 h-1 bg-[#7C3AED] mt-5" />
+          <div className="w-16 h-1 bg-[#22D3EE] mt-5" />
 
-          <p className="text-[#64748B] max-w-2xl mt-6 text-lg leading-7">
+          <p className="text-[#94A3B8] max-w-2xl mt-6 text-lg leading-7">
             Technologies and tools I use to build my projects and bring ideas
             into working applications.
           </p>
@@ -74,24 +74,24 @@ function Skills() {
             <div className="relative w-72 h-72 md:w-96 md:h-96">
 
               {/* Outer Circle */}
-              <div className="absolute inset-0 border border-[#E2E8F0] rounded-full" />
+              <div className="absolute inset-0 border border-[#22304A] rounded-full" />
 
               {/* Inner Circle */}
-              <div className="absolute inset-10 border border-[#CBD5E1] rounded-full" />
+              <div className="absolute inset-10 border border-[#33445F] rounded-full" />
 
               {/* Center */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-40 h-40 md:w-48 md:h-48 border-2 border-[#7C3AED] rounded-full bg-white flex flex-col items-center justify-center">
+                <div className="w-40 h-40 md:w-48 md:h-48 border-2 border-[#22D3EE] rounded-full bg-[#111C2E] shadow-[0_0_45px_rgba(34,211,238,0.18)] flex flex-col items-center justify-center">
 
-                  <span className="text-[#7C3AED] text-sm tracking-widest">
+                  <span className="text-[#22D3EE] text-sm tracking-widest">
                     MY
                   </span>
 
-                  <h3 className="text-3xl font-bold text-[#0F172A]">
+                  <h3 className="text-3xl font-bold text-[#F1F5F9]">
                     TOOLKIT
                   </h3>
 
-                  <span className="text-[#64748B] text-xs mt-2">
+                  <span className="text-[#94A3B8] text-xs mt-2">
                     BUILD • CREATE
                   </span>
 
@@ -99,10 +99,10 @@ function Skills() {
               </div>
 
               {/* Decorative dots */}
-              <div className="absolute top-5 left-1/2 w-2 h-2 bg-[#7C3AED] rounded-full" />
-              <div className="absolute bottom-5 left-1/2 w-2 h-2 bg-[#7C3AED] rounded-full" />
-              <div className="absolute left-5 top-1/2 w-2 h-2 bg-[#7C3AED] rounded-full" />
-              <div className="absolute right-5 top-1/2 w-2 h-2 bg-[#7C3AED] rounded-full" />
+              <div className="absolute top-5 left-1/2 w-2 h-2 bg-[#22D3EE] rounded-full" />
+              <div className="absolute bottom-5 left-1/2 w-2 h-2 bg-[#22D3EE] rounded-full" />
+              <div className="absolute left-5 top-1/2 w-2 h-2 bg-[#22D3EE] rounded-full" />
+              <div className="absolute right-5 top-1/2 w-2 h-2 bg-[#22D3EE] rounded-full" />
 
             </div>
           </motion.div>
@@ -114,7 +114,7 @@ function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-2xl font-semibold mb-8 text-[#0F172A]"
+              className="text-2xl font-semibold mb-8 text-[#F1F5F9]"
             >
               My Main Toolkit
             </motion.h3>
@@ -134,13 +134,13 @@ function Skills() {
                       delay: index * 0.08,
                     }}
                     whileHover={{ y: -6 }}
-                    className="group border border-[#E2E8F0] bg-white p-6 flex flex-col items-center justify-center gap-4 rounded-xl hover:border-[#7C3AED] transition-colors duration-300"
+                    className="group border border-[#22304A] bg-[#111C2E] p-6 flex flex-col items-center justify-center gap-4 rounded-xl hover:border-[#22D3EE] transition-colors duration-300"
                   >
                     <Icon
                       className={`${skill.color} text-4xl group-hover:scale-110 transition-transform duration-300`}
                     />
 
-                    <span className="text-[#334155] text-sm font-medium text-center">
+                    <span className="text-[#CBD5E1] text-sm font-medium text-center">
                       {skill.name}
                     </span>
                   </motion.div>
@@ -156,20 +156,20 @@ function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mt-24 pt-12 border-t border-[#E2E8F0]"
+          className="mt-24 pt-12 border-t border-[#22304A]"
         >
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
 
             <div>
-              <p className="text-[#7C3AED] text-sm font-medium mb-2">
+              <p className="text-[#22D3EE] text-sm font-medium mb-2">
                 Currently Exploring
               </p>
 
-              <h3 className="text-2xl md:text-3xl font-bold text-[#0F172A]">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#F1F5F9]">
                 Always learning something new.
               </h3>
 
-              <p className="text-[#64748B] mt-3 max-w-xl">
+              <p className="text-[#94A3B8] mt-3 max-w-xl">
                 I'm currently expanding my programming knowledge with Advanced
                 Java and Python.
               </p>
@@ -190,11 +190,11 @@ function Skills() {
                       duration: 0.5,
                       delay: index * 0.15,
                     }}
-                    className="border border-[#E2E8F0] px-6 py-5 bg-white flex items-center gap-3 rounded-xl hover:border-[#7C3AED] transition-colors duration-300"
+                    className="border border-[#22304A] px-6 py-5 bg-[#111C2E] flex items-center gap-3 rounded-xl hover:border-[#22D3EE] transition-colors duration-300"
                   >
                     <Icon className={`${skill.color} text-2xl`} />
 
-                    <span className="text-[#334155] font-medium">
+                    <span className="text-[#CBD5E1] font-medium">
                       {skill.name}
                     </span>
                   </motion.div>

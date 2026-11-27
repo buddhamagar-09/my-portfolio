@@ -102,11 +102,11 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="relative bg-[#F8FAFC] text-[#0F172A] py-14 overflow-hidden"
+      className="relative bg-transparent text-[#F1F5F9] py-14 overflow-hidden"
     >
       {/* Background Decoration */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl z-0" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-violet-100/50 rounded-full blur-3xl z-0" />
+      <div className="absolute top-20 right-0 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl z-0" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Heading */}
@@ -118,18 +118,18 @@ function Contact() {
           className="max-w-3xl mb-16"
         >
           <div className="flex items-center gap-3 mb-5">
-            <span className="w-10 h-px bg-[#7C3AED]" />
-            <p className="text-[#7C3AED] font-semibold uppercase tracking-widest text-sm">
+            <span className="w-10 h-px bg-[#22D3EE]" />
+            <p className="text-[#22D3EE] font-semibold uppercase tracking-widest text-sm">
               Contact
             </p>
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
             Let's build something
-            <span className="block text-[#7C3AED]">great together.</span>
+            <span className="block text-[#22D3EE]">great together.</span>
           </h2>
 
-          <p className="text-[#64748B] text-lg leading-8 mt-6 max-w-2xl">
+          <p className="text-[#94A3B8] text-lg leading-8 mt-6 max-w-2xl">
             Have a project idea, collaboration opportunity, or just want to
             connect? Feel free to reach out anytime.
           </p>
@@ -145,7 +145,7 @@ function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2"
           >
-            <p className="text-[#475569] leading-8 mb-10">
+            <p className="text-[#B8C5D6] leading-8 mb-10">
               I'm always interested in discussing new ideas, web development
               projects, collaborations, and opportunities to learn and grow.
             </p>
@@ -157,7 +157,7 @@ function Contact() {
 
                 const content = (
                   <>
-                    <div className="w-12 h-12 rounded-xl bg-[#F3E8FF] text-[#7C3AED] flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-[#0E2A33] text-[#22D3EE] flex items-center justify-center shrink-0">
                       <Icon className="text-lg" />
                     </div>
 
@@ -165,11 +165,11 @@ function Contact() {
                       <p className="text-sm text-[#94A3B8] mb-1">
                         {item.label}
                       </p>
-                      <p className="font-medium text-[#1E293B]">{item.value}</p>
+                      <p className="font-medium text-[#E2E8F0]">{item.value}</p>
                     </div>
 
                     {item.link && (
-                      <FaArrowUpRightFromSquare className="text-[#94A3B8] text-sm group-hover:text-[#7C3AED] transition-colors" />
+                      <FaArrowUpRightFromSquare className="text-[#94A3B8] text-sm group-hover:text-[#22D3EE] transition-colors" />
                     )}
                   </>
                 );
@@ -180,7 +180,7 @@ function Contact() {
                     href={item.link}
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.2 }}
-                    className="group flex items-center gap-4 p-5 bg-white border border-[#E2E8F0] rounded-2xl hover:border-[#C4B5FD] hover:shadow-lg hover:shadow-purple-100/50 transition-all"
+                    className="group flex items-center gap-4 p-5 bg-[#111C2E] border border-[#22304A] rounded-2xl hover:border-[#22D3EE] hover:shadow-lg hover:shadow-cyan-400/20 transition-all"
                   >
                     {content}
                   </motion.a>
@@ -189,7 +189,7 @@ function Contact() {
                     key={item.label}
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.2 }}
-                    className="flex items-center gap-4 p-5 bg-white border border-[#E2E8F0] rounded-2xl hover:border-[#C4B5FD] hover:shadow-lg hover:shadow-purple-100/50 transition-all"
+                    className="flex items-center gap-4 p-5 bg-[#111C2E] border border-[#22304A] rounded-2xl hover:border-[#22D3EE] hover:shadow-lg hover:shadow-cyan-400/20 transition-all"
                   >
                     {content}
                   </motion.div>
@@ -199,7 +199,7 @@ function Contact() {
 
             {/* Social Links */}
             <div className="mt-10">
-              <p className="text-sm font-medium text-[#475569] mb-4">
+              <p className="text-sm font-medium text-[#B8C5D6] mb-4">
                 Find me online
               </p>
 
@@ -215,7 +215,7 @@ function Contact() {
                       rel="noreferrer"
                       whileHover={{ y: -5, scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-12 h-12 rounded-xl border border-[#E2E8F0] bg-white flex items-center justify-center text-[#64748B] hover:bg-[#7C3AED] hover:text-white hover:border-[#7C3AED] transition-colors shadow-sm"
+                      className="w-12 h-12 rounded-xl border border-[#22304A] bg-[#111C2E] flex items-center justify-center text-[#94A3B8] hover:bg-[#22D3EE] hover:text-[#06111F] hover:border-[#22D3EE] transition-colors shadow-sm"
                       aria-label={social.label}
                     >
                       <Icon className="text-lg" />
@@ -234,12 +234,12 @@ function Contact() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-3"
           >
-            <div className="bg-white border border-[#E2E8F0] rounded-2xl p-7 md:p-10 shadow-xl shadow-slate-200/40">
+            <div className="bg-[#111C2E] border border-[#22304A] rounded-2xl p-7 md:p-10 shadow-xl shadow-black/40">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-[#0F172A]">
+                <h3 className="text-2xl font-bold text-[#F1F5F9]">
                   Send me a message
                 </h3>
-                <p className="text-[#64748B] mt-2">
+                <p className="text-[#94A3B8] mt-2">
                   Fill out the form and I'll get back to you as soon as
                   possible.
                 </p>
@@ -249,7 +249,7 @@ function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   {/* Name */}
                   <div>
-                    <label className="block text-sm font-medium text-[#334155] mb-2">
+                    <label className="block text-sm font-medium text-[#CBD5E1] mb-2">
                       Your Name
                     </label>
 
@@ -260,13 +260,13 @@ function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       // placeholder="John Doe"
-                      className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3.5 text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#7C3AED] focus:ring-4 focus:ring-purple-100 transition-all"
+                      className="w-full bg-[#0A1120] border border-[#22304A] rounded-xl px-4 py-3.5 text-[#F1F5F9] placeholder:text-[#94A3B8] outline-none focus:border-[#22D3EE] focus:ring-4 focus:ring-cyan-400/20 transition-all"
                     />
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label className="block text-sm font-medium text-[#334155] mb-2">
+                    <label className="block text-sm font-medium text-[#CBD5E1] mb-2">
                       Email Address
                     </label>
 
@@ -277,14 +277,14 @@ function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       // placeholder="john@email.com"
-                      className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3.5 text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#7C3AED] focus:ring-4 focus:ring-purple-100 transition-all"
+                      className="w-full bg-[#0A1120] border border-[#22304A] rounded-xl px-4 py-3.5 text-[#F1F5F9] placeholder:text-[#94A3B8] outline-none focus:border-[#22D3EE] focus:ring-4 focus:ring-cyan-400/20 transition-all"
                     />
                   </div>
                 </div>
 
                 {/* Subject */}
                 <div className="mt-5">
-                  <label className="block text-sm font-medium text-[#334155] mb-2">
+                  <label className="block text-sm font-medium text-[#CBD5E1] mb-2">
                     Subject
                   </label>
 
@@ -295,13 +295,13 @@ function Contact() {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="What's this about?"
-                    className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3.5 text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#7C3AED] focus:ring-4 focus:ring-purple-100 transition-all"
+                    className="w-full bg-[#0A1120] border border-[#22304A] rounded-xl px-4 py-3.5 text-[#F1F5F9] placeholder:text-[#94A3B8] outline-none focus:border-[#22D3EE] focus:ring-4 focus:ring-cyan-400/20 transition-all"
                   />
                 </div>
 
                 {/* Message */}
                 <div className="mt-5">
-                  <label className="block text-sm font-medium text-[#334155] mb-2">
+                  <label className="block text-sm font-medium text-[#CBD5E1] mb-2">
                     Message
                   </label>
 
@@ -312,18 +312,18 @@ function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell me about your project or idea..."
-                    className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3.5 text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#7C3AED] focus:ring-4 focus:ring-purple-100 transition-all resize-none"
+                    className="w-full bg-[#0A1120] border border-[#22304A] rounded-xl px-4 py-3.5 text-[#F1F5F9] placeholder:text-[#94A3B8] outline-none focus:border-[#22D3EE] focus:ring-4 focus:ring-cyan-400/20 transition-all resize-none"
                   />
                 </div>
 
                 {status === "success" && (
-                  <p className="mt-5 text-green-600 font-medium">
+                  <p className="mt-5 text-emerald-400 font-medium">
                     Message sent successfully! I'll get back to you soon.
                   </p>
                 )}
 
                 {status === "error" && (
-                  <p className="mt-5 text-red-600 font-medium">
+                  <p className="mt-5 text-rose-400 font-medium">
                     Something went wrong. Please try again.
                   </p>
                 )}
@@ -333,7 +333,7 @@ function Contact() {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="mt-7 inline-flex items-center justify-center gap-3 bg-[#7C3AED] text-white px-7 py-3.5 rounded-xl font-semibold hover:bg-[#6D28D9] shadow-lg shadow-purple-200 transition-colors"
+                  className="mt-7 inline-flex items-center justify-center gap-3 bg-[#22D3EE] text-[#06111F] px-7 py-3.5 rounded-xl font-semibold hover:bg-[#67E8F9] shadow-lg shadow-cyan-400/25 transition-colors"
                 >
                   Send Message
                   <FaPaperPlane className="text-sm" />
